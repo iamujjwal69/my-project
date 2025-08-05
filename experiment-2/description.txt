@@ -1,0 +1,9 @@
+This Banking UI project is a simple web-based application built using HTML, CSS, and JavaScript that simulates basic banking operations like deposit and withdrawal. The application allows users to enter an amount and either add it to or deduct it from the displayed balance. The interface is clean and responsive, making it ideal for beginners learning DOM manipulation and event handling.
+
+The HTML structure includes a display section for the current balance, an input field for the amount, and two buttons — "Deposit" and "Withdraw". The CSS styling uses a modern layout with a centered white card-style container, rounded corners, and colored buttons for deposit (green) and withdraw (red), giving clear visual feedback to the user. Button hover effects enhance interactivity.
+
+The JavaScript logic handles all the operations. Initially, the balance is set to $0.00. When a user enters a value and clicks "Deposit", the value is validated and added to the balance. On clicking "Withdraw", the value is subtracted only if the balance is sufficient. Alerts are triggered for invalid inputs like negative or non-numeric values, and for withdrawal attempts that exceed the balance.
+
+The functions used include getInputAmount() for input validation, updateBalanceDisplay() to update the UI, and deposit() and withdraw() to perform operations. Event listeners handle button clicks and call the appropriate functions.
+
+Overall, this project strengthens understanding of real-time UI updates, form handling, and conditional logic in JavaScript.
