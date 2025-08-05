@@ -1,9 +1,18 @@
-This Banking UI project is a simple web-based application built using HTML, CSS, and JavaScript that simulates basic banking operations like deposit and withdrawal. The application allows users to enter an amount and either add it to or deduct it from the displayed balance. The interface is clean and responsive, making it ideal for beginners learning DOM manipulation and event handling.
+🏦 Banking UI – Project Description (Without Script)
 
-The HTML structure includes a display section for the current balance, an input field for the amount, and two buttons — "Deposit" and "Withdraw". The CSS styling uses a modern layout with a centered white card-style container, rounded corners, and colored buttons for deposit (green) and withdraw (red), giving clear visual feedback to the user. Button hover effects enhance interactivity.
+This **Banking UI** project is a clean and structured front-end application built using **HTML** and **CSS**, designed to simulate a minimal banking interface. The layout consists of a balance display area, an amount input field, and two functional buttons labeled **Deposit** and **Withdraw**. Although this version does not include scripting for functionality, it visually represents how a real banking UI would look and feel.
 
-The JavaScript logic handles all the operations. Initially, the balance is set to $0.00. When a user enters a value and clicks "Deposit", the value is validated and added to the balance. On clicking "Withdraw", the value is subtracted only if the balance is sufficient. Alerts are triggered for invalid inputs like negative or non-numeric values, and for withdrawal attempts that exceed the balance.
+The **HTML** forms the foundation of the interface, with semantic tags used for accessibility and clarity. The container holds three main components: a green-colored balance display (`#balance`), an input box (`#amount`) for entering the amount, and buttons for deposit and withdrawal actions. The structure is simple, readable, and ready for back-end or JavaScript integration in future stages.
 
-The functions used include getInputAmount() for input validation, updateBalanceDisplay() to update the UI, and deposit() and withdraw() to perform operations. Event listeners handle button clicks and call the appropriate functions.
+The **CSS** adds life to the layout. The `body` uses flexbox to center the interface both vertically and horizontally. The `.banking-ui` container is styled with padding, a white background, rounded corners, and a soft box shadow for a modern card-like appearance. The input field is styled to span full width with proper padding and border radius. The **buttons** are visually distinguished using green (deposit) and red (withdraw), with hover effects that enhance user interaction.
 
-Overall, this project strengthens understanding of real-time UI updates, form handling, and conditional logic in JavaScript.
+---
+
+ ✅ Learning Outcomes:
+
+1. Gained hands-on experience in creating structured web interfaces using HTML.
+2. Learnt how to use CSS for layout, design aesthetics, and responsive styling.
+3. Understood how to visually represent financial systems like a banking dashboard.
+4. Built a solid front-end base for future JavaScript or backend integration.
+
+
