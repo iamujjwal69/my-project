@@ -1,7 +1,97 @@
-The Student Registration Form created using HTML and CSS is a simple yet effective web form that collects user details such as Name, Email, and Age. The form includes HTML5 validation to ensure the correctness and completeness of user input. The **Name field** uses the `pattern="[A-Za-z\s]+"` attribute, allowing only alphabets and spaces. It is marked as `required` to prevent empty submissions. The **Email field** is of type `email`, which automatically checks for valid email formats like `example@domain.com`. The **Age field** accepts only numeric input with `type="number"` and restricts the value between 5 and 130 using `min` and `max` attributes.
 
-The form is visually styled using CSS. The `body` is given a light purple background and flexbox layout to center the form on the screen. The `form` element has a soft cream background, rounded corners, padding, and a green ridge border, giving it an attractive and friendly appearance. Spacing and font sizes are adjusted for better readability. A submit button is included, which triggers validations upon click.
+**STUDENT REGISTRATION FORM TEST CASES & VALIDATIONS**
 
-Test cases were applied to verify form behavior. Valid inputs allow successful form submission, while invalid ones such as numbers in the name, incorrect email formats, or out-of-range ages are automatically rejected with browser error messages.
+1. **FIELD: Name**
+   **Requirement:**
 
-Overall, this form project helped in learning key concepts such as HTML5 input validations, regex pattern use, CSS styling for layout and design, and how to test form functionality. It serves as a strong foundation for creating user-friendly and accessible web forms.
+   * This field is mandatory (`required`) – form cannot be submitted if it's empty.
+   * Only alphabetic characters and spaces are allowed (`pattern="[A-Za-z\s]+"`).
+   * `+` ensures at least one valid character must be present.
+
+   **VALID INPUTS:**
+
+   * `"Asmita Singh"`
+   * `"John Doe"`
+
+   **INVALID INPUTS:**
+
+   * `"asmita123"` – Numbers are not allowed.
+   * `"asmita_singh"` – Underscore is invalid.
+   * `"ASM@Singh"` – Special characters like `@` are not permitted.
+
+2. **FIELD: Email**
+   **Requirement:**
+
+   * Required field.
+   * Must follow the valid email pattern (`type="email"`), e.g., `name@domain.com`.
+
+   **VALID INPUTS:**
+
+   * `"asmita@example.com"`
+   * `"student123@college.edu"`
+
+   **INVALID INPUTS:**
+
+   * `"asmita"` – Missing `@` and domain.
+   * `"asmita@.com"` – Missing domain name.
+   * `"asmita@domain,com"` – Comma used instead of a period.
+
+3. **FIELD: Age**
+   **Requirement:**
+
+   * Required field.
+   * Must be a number (`type="number"`).
+   * Age must be within the range `min="5"` and `max="130"`.
+
+   **VALID INPUTS:**
+
+   * `5` – Minimum allowed.
+   * `21`, `50` – Typical values.
+   * `130` – Maximum allowed.
+
+   **INVALID INPUTS:**
+
+   * `""` (empty) – Triggers required field error.
+   * `4` – Less than minimum.
+   * `131` – Greater than maximum.
+   * `"abc"` – Not a numeric value.
+
+4. **FORM SUBMISSION:**
+
+   * If **all fields are valid**, the form submits successfully.
+   * If **any field is invalid**, submission is blocked and browser displays validation messages.
+
+
+**CSS STYLING BREAKDOWN**
+
+A summary of the styling properties applied via CSS for visual design and layout:
+
+1. **ELEMENT: body (Page Layout)**
+
+   * `background-color: #c8a2c8;` (light purple): Sets a calming background tone.
+   * Centering achieved via flexbox or vertical margin like `margin-top: 30vh;`.
+
+2. **ELEMENT: form (Form Box)**
+
+   * `background-color: #fffdd0;` (cream background): Highlights form against page.
+   * `padding`, `border-radius`, and `border: ridge 2px green;`: Makes the form clean and approachable.
+   * `margin` and centering properties ensure it stays visually balanced on screen.
+
+3. **ELEMENT: input fields**
+
+   * Full width with padding: Enhances usability.
+   * `font-size: 17px;`, `border: 1px solid #ddd;`, `border-radius: 5px;`: Provides consistent and user-friendly input fields.
+
+4. **ELEMENT: Submit Button (`<button type="submit">`)**
+
+   * `background-color: green;`, `color: white;`: High contrast for visibility.
+   * `font-size: 20px;`, `padding: 12px;`: Easy to spot and click.
+   * `margin-top: 10px;`: Adds spacing from input fields.
+
+
+**LEARNING OUTCOMES:**
+
+1. Gained practical experience in building a **Student Registration Form** using HTML and CSS.
+2. Understood how to apply **HTML5 validation attributes** (`required`, `pattern`, `type`, `min`, `max`).
+3. Learned to write and execute **test cases** for validating form behavior with both valid and invalid inputs.
+4. Practiced creating a **visually styled form** with CSS for a user-friendly interface.
