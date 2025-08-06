@@ -1,4 +1,3 @@
-
 **STUDENT REGISTRATION FORM TEST CASES & VALIDATIONS**
 
 1. **FIELD: Name**
@@ -10,14 +9,14 @@
 
    **VALID INPUTS:**
 
-   * `"Asmita Singh"`
+   * `"Ujjwal Sharma"`
    * `"John Doe"`
 
    **INVALID INPUTS:**
 
-   * `"asmita123"` – Numbers are not allowed.
-   * `"asmita_singh"` – Underscore is invalid.
-   * `"ASM@Singh"` – Special characters like `@` are not permitted.
+   * `"ujjwal123"` – Numbers are not allowed.
+   * `"ujjwal_sharma"` – Underscore is invalid.
+   * `"UJJ@Sharma"` – Special characters like `@` are not permitted.
 
 2. **FIELD: Email**
    **Requirement:**
@@ -27,14 +26,14 @@
 
    **VALID INPUTS:**
 
-   * `"asmita@example.com"`
+   * `"ujjwal@example.com"`
    * `"student123@college.edu"`
 
    **INVALID INPUTS:**
 
-   * `"asmita"` – Missing `@` and domain.
-   * `"asmita@.com"` – Missing domain name.
-   * `"asmita@domain,com"` – Comma used instead of a period.
+   * `"ujjwal"` – Missing `@` and domain.
+   * `"ujjwal@.com"` – Missing domain name.
+   * `"ujjwal@domain,com"` – Comma used instead of a period.
 
 3. **FIELD: Age**
    **Requirement:**
@@ -61,6 +60,7 @@
    * If **all fields are valid**, the form submits successfully.
    * If **any field is invalid**, submission is blocked and browser displays validation messages.
 
+---
 
 **CSS STYLING BREAKDOWN**
 
@@ -88,6 +88,7 @@ A summary of the styling properties applied via CSS for visual design and layout
    * `font-size: 20px;`, `padding: 12px;`: Easy to spot and click.
    * `margin-top: 10px;`: Adds spacing from input fields.
 
+---
 
 **LEARNING OUTCOMES:**
 
