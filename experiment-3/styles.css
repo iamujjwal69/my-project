@@ -1,0 +1,86 @@
+/* Base Layout using CSS Grid */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Sections */
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 10px;
+}
+
+.content {
+  grid-area: content;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Light Mode */
+body.light-mode .header {
+  background-color: #4CAF50;
+  color: white;
+}
+body.light-mode .sidebar {
+  background-color: #f0f0f0;
+  color: black;
+}
+body.light-mode .content {
+  background-color: white;
+  color: black;
+}
+body.light-mode .footer {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Dark Mode */
+body.dark-mode .header {
+  background-color: #333;
+  color: white;
+}
+body.dark-mode .sidebar {
+  background-color: #444;
+  color: white;
+}
+body.dark-mode .content {
+  background-color: #222;
+  color: white;
+}
+body.dark-mode .footer {
+  background-color: #333;
+  color: white;
+}
+
+/* Links */
+.sidebar a {
+  color: purple;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
