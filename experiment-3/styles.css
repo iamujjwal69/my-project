@@ -1,86 +1,79 @@
-/* Base Layout using CSS Grid */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+:root{
+  --bg-color-header:limegreen;
+  --bg-color-footer:limegreen;
+  --bg-color-nav:rgb(214, 214, 214);
+  --bg-color-main:white;
+  --color-main:black;
 }
 
-.dashboard {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
-/* Sections */
-.header {
-  grid-area: header;
+header{
+  color: white;
+  border: 1px solid black;
+  background-color: var(--bg-color-header);
+  grid-column:1/span 2;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  align-items:center; 
 }
 
-.sidebar {
-  grid-area: sidebar;
+header h3 {
+  font-size: 1.8rem;
   padding: 10px;
 }
+header label{
+  padding: 50px;
+  font-size: large;
+}
 
-.content {
-  grid-area: content;
+main{
+  padding: 40px;
+  border: 1px solid black;
+  background-color: var(--bg-color-main);
+  color: var(--color-main);
+}
+
+main span{
+  font-size: large;
+}
+
+nav{
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: var(--bg-color-nav);
+}
+.discs{
+  color: black;
+}
+
+footer{
+  font-size: larger;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+  background-color: var(--bg-color-footer);
+  grid-column:1/span 2;
   padding: 20px;
 }
 
-.footer {
-  grid-area: footer;
-  text-align: center;
-  padding: 10px;
+.dashboard{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px auto 70px;
+  height: 100vh;
 }
 
-/* Light Mode */
-body.light-mode .header {
-  background-color: #4CAF50;
-  color: white;
-}
-body.light-mode .sidebar {
-  background-color: #f0f0f0;
-  color: black;
-}
-body.light-mode .content {
-  background-color: white;
-  color: black;
-}
-body.light-mode .footer {
-  background-color: #4CAF50;
-  color: white;
+#toggle {
+  display: none;
 }
 
-/* Dark Mode */
-body.dark-mode .header {
-  background-color: #333;
-  color: white;
-}
-body.dark-mode .sidebar {
-  background-color: #444;
-  color: white;
-}
-body.dark-mode .content {
-  background-color: #222;
-  color: white;
-}
-body.dark-mode .footer {
-  background-color: #333;
-  color: white;
-}
-
-/* Links */
-.sidebar a {
-  color: purple;
-  text-decoration: none;
-}
-.sidebar a:hover {
-  text-decoration: underline;
+input:checked ~ .dashboard  {
+  --bg-color-header:gray;
+  --bg-color-footer:gray;
+  --bg-color-nav:rgb(181, 181, 181);
+  --bg-color-main:black;
+  --color-main:white;
 }
