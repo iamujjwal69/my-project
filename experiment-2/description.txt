@@ -1,104 +1,123 @@
-**BANKING UI – STRUCTURED PROJECT OVERVIEW (HTML + CSS ONLY)**
+
+## 🔷 PROJECT OVERVIEW
+
+This **Banking UI** project is a clean and minimal front-end design built using **HTML** and **CSS**, meant to represent the look of a simple **banking interface**. It visually demonstrates:
+
+1. **Balance display** area for showing the account amount.
+2. **Amount input field** for entering deposits or withdrawals.
+3. **Action buttons** for Deposit and Withdraw.
+
+**Note:** This is a purely **static front-end** project. No JavaScript or functional logic is implemented — the UI is **visual only**.
 
 ---
 
-### 🔷 PROJECT OVERVIEW
+## 🧱 HTML STRUCTURE & SEMANTICS
 
-This **Banking UI** project is a simple, clean, and well-structured front-end layout developed using **HTML** and **CSS**, intended to simulate a **basic banking interface**. While it does not include scripting or functional logic, the project visually models core banking operations such as **displaying balance**, and **deposit/withdrawal input**.
+* The UI is placed inside a central container `.banking-ui`.
+* Semantic and accessible HTML elements are used for clarity.
+* **Key elements:**
 
-The interface is divided into three major components:
+  * `#balance` → Displays balance (static text).
+  * `#amount` → Input field for number entry.
+  * Buttons:
 
-1. A **balance display area** (styled in green) to show the user’s account balance.
-2. An **input field** to enter deposit/withdrawal amounts.
-3. Two **buttons** – one for **Deposit** and another for **Withdraw**, visually styled for easy user recognition.
-
-This static UI serves as a foundation for integrating JavaScript-based functionality or backend logic in future development phases.
+    ```html
+    <button class="deposit-btn">Deposit</button>
+    <button class="withdraw-btn">Withdraw</button>
+    ```
 
 ---
 
-### 🧱 HTML STRUCTURE & SEMANTICS
+## 🎨 CSS STYLING BREAKDOWN
 
-* HTML elements are structured for **clarity and accessibility**, using semantic tags.
-* Key IDs used:
+### 1. **body**
 
-  * `#balance` – Displays current balance.
-  * `#amount` – Input field to enter numerical values.
-* Buttons for actions:
+* **Purpose:** Centers the banking card.
+* **CSS:**
 
-  * `<button class="deposit-btn">Deposit</button>`
-  * `<button class="withdraw-btn">Withdraw</button>`
-* Layout is placed within a central `.banking-ui` container.
+  ```css
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  ```
+
+### 2. **.banking-ui (Container)**
+
+* **Purpose:** Main card layout.
+* **CSS:**
+
+  ```css
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  ```
+
+### 3. **#balance (Balance Display)**
+
+* **Purpose:** Shows static account balance.
+* **CSS:**
+
+  ```css
+  background-color: #e0f7e9;
+  color: #2e7d32;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  ```
+
+### 4. **#amount (Input Field)**
+
+* **Purpose:** Input for transaction amount (no functionality).
+* **CSS:**
+
+  ```css
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  ```
+
+### 5. **.deposit-btn / .withdraw-btn (Buttons)**
+
+* **Purpose:** Represent actions visually.
+* **CSS Common:**
+
+  ```css
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  ```
+* **Deposit Button:**
+
+  ```css
+  background-color: #4caf50;
+  color: white;
+  ```
+* **Withdraw Button:**
+
+  ```css
+  background-color: #f44336;
+  color: white;
+  ```
+
+---
+
+## ✅ LEARNING OUTCOMES
+
+1. How to create a **structured UI** with HTML + CSS only.
+2. Understanding **flexbox centering** for responsive layouts.
+3. Using **color & styling cues** for differentiating actions.
 
 
-### 🎨 CSS STYLING BREAKDOWN
-
-#### 1. **ELEMENT: body**
-
-* **Purpose:** Centers the banking UI on the page.
-* **Properties:**
-
-  * `display: flex;`, `justify-content: center;`, `align-items: center;`, `min-height: 100vh;`
-  * `background-color: #f0f4f8;` – Gives a light, soft background.
-
-#### 2. **ELEMENT: .banking-ui (Main Container)**
-
-* **Purpose:** Holds all UI components and creates a card-like layout.
-* **Properties:**
-
-  * `background-color: #ffffff;`
-  * `padding: 30px;`
-  * `border-radius: 10px;`
-  * `box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);`
-  * `width: 300px;` – Keeps layout compact.
-
-#### 3. **ELEMENT: #balance (Balance Display)**
-
-* **Purpose:** Visually highlights current balance.
-* **Properties:**
-
-  * `background-color: #e0f7e9;`
-  * `color: #2e7d32;`
-  * `font-weight: bold;`
-  * `padding: 15px;`
-  * `margin-bottom: 20px;`
-  * `text-align: center;`
-  * `border-radius: 5px;`
-
-#### 4. **ELEMENT: #amount (Input Field)**
-
-* **Purpose:** Accepts numeric value for transaction.
-* **Properties:**
-
-  * `width: 100%;`
-  * `padding: 10px;`
-  * `margin-bottom: 15px;`
-  * `border-radius: 5px;`
-  * `border: 1px solid #ccc;`
-  * `font-size: 16px;`
-
-#### 5. **ELEMENTS: .deposit-btn / .withdraw-btn (Action Buttons)**
-
-* **Purpose:** Represent different banking actions.
-* **Properties:**
-
-  * `width: 100%;`
-  * `padding: 12px;`
-  * `margin-top: 10px;`
-  * `font-size: 18px;`
-  * `border-radius: 5px;`
-  * `border: none;`
-  * `cursor: pointer;`
-
-**Distinct styles:**
-
-* `.deposit-btn` → `background-color: #4caf50;` (green)
-* `.withdraw-btn` → `background-color: #f44336;` (red)
-* **Hover Effects:** Slight darkening on hover for interactive feedback.
-
-
-### ✅ LEARNING OUTCOMES
-
-1. Learnt how to build a **clean, structured banking UI** using only HTML and CSS.
-2. Understood the application of **flexbox and layout techniques** for responsive centering.
-3. Gained insight into using **visual cues** (colors, hover effects) for user actions.
-4. Created a **front-end framework** ready for enhancement with JavaScript or backend systems.
