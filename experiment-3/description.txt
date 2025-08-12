@@ -1,84 +1,91 @@
-# ADMIN DASHBOARD – DESCRIPTION & ANALYSIS
 
-## OBJECTIVE
-To design and develop a responsive admin dashboard interface using HTML, CSS Grid layout, and JavaScript with a theme-switching feature (Light/Dark modes).
+## **Experiment – Admin Dashboard with Light/Dark Mode Toggle**
 
-## FEATURES & VALIDATIONS
+### **Objective**
 
-1. Theme Switching Functionality
+To design a **responsive and visually clear Admin Dashboard** layout using **HTML and CSS**, with a functional **Light/Dark mode toggle** implemented using CSS variables.
 
-Requirement: Users should be able to toggle between Light Mode and Dark Mode dynamically.
+---
 
-Implementation:
+### **HTML Structure – `AdminDashboard.html`**&#x20;
 
-HTML checkbox input (#theme-toggle) to switch modes.
+1. **Page Setup**
 
-JavaScript toggles dark-mode and light-mode classes on <body> when the checkbox state changes
-.
+   * Declared document type (`<!DOCTYPE html>`) and set language to English.
+   * Linked external stylesheet `styles.css`.
+   * Defined viewport meta tag for responsive design.
 
-2. Layout Structure (CSS Grid)
+2. **Theme Toggle Input**
 
-Requirement: Create a clean and organized layout with Header, Sidebar, Content Area, and Footer.
+   * An invisible checkbox (`#toggle`) is placed before the main container to control the theme.
 
-Implementation:
+3. **Dashboard Layout (`.dashboard`)**
 
-Grid template areas defined for sections: "header header", "sidebar content", "footer footer".
+   * **Header:**
 
-grid-template-columns: 200px 1fr; ensures fixed sidebar width and flexible main content
-.
+     * Displays **"Admin Dashboard"** title on the left.
+     * **Dark Mode** label on the right linked to the toggle checkbox.
+   * **Navigation Sidebar (`<nav>`)**:
 
-3. Navigation Menu
+     * Contains links for **Home**, **Users**, and **Settings**.
+   * **Main Content (`<main>`)**:
 
-Requirement: Sidebar with navigation links.
+     * Displays a welcome heading and placeholder text for charts, tables, and reports.
+   * **Footer:**
 
-Implementation:
+     * Shows ©2025 Admin Panel at the bottom.
 
-Unordered list (<ul>) with list items (<li>) for Home, Users, and Settings.
+---
 
-Links styled with purple color and hover underline effect
-.
+### **CSS Styling – `styles.css`**&#x20;
 
-## CSS STYLING BREAKDOWN
+1. **CSS Variables (`:root`)**
 
-1. Base Layout
+   * Defined default colors for header, footer, nav, main background, and text color.
 
-display: grid; for the .dashboard container.
+2. **Header Styling**
 
-grid-template-areas for defining section positions.
+   * Flex layout to space title and toggle label.
+   * Bold green background in light mode.
+   * Large font size for title and label.
 
-min-height: 100vh; ensures full viewport coverage.
+3. **Sidebar Styling**
 
-2. Light Mode Styling (body.light-mode)
+   * Vertical column layout with padding.
+   * Light gray background in light mode.
 
-Header/Footer: Green background (#4CAF50) with white text.
+4. **Main Content Styling**
 
-Sidebar: Light gray (#f0f0f0) background, black text.
+   * Padding and border for separation.
+   * Background and text colors controlled by CSS variables.
 
-Content: White background, black text
-.
+5. **Footer Styling**
 
-3. Dark Mode Styling (body.dark-mode)
+   * Centered text with padding.
+   * Matches header background color.
 
-Header/Footer: Dark gray (#333) with white text.
+6. **Grid Layout (`.dashboard`)**
 
-Sidebar: Medium gray (#444) with white text.
+   * 2 columns (200px sidebar + flexible main area).
+   * 3 rows (header, main content, footer).
+   * Full viewport height.
 
-Content: Almost black (#222) with white text
-.
+7. **Light/Dark Mode Toggle**
 
-4. Links
+   * The `#toggle` checkbox is hidden visually.
+   * When checked, it updates CSS variables to switch:
 
-Default purple color.
+     * Header/footer background → Gray
+     * Nav background → Darker gray
+     * Main background → Black
+     * Text color → White
 
-Underline effect on hover for better user experience.
+---
 
-##LEARNING OUTCOMES
+### **Learning Outcomes**
 
-1. Learned to create a responsive dashboard layout using CSS Grid.
-
-2. Implemented Light/Dark mode toggling using JavaScript and CSS classes.
-
-3. Understood grid-template-areas for structured and maintainable page layouts.
-
-4. Gained knowledge of interactive UI design principles for admin panels.
+* Implemented **CSS Grid** for a multi-section layout.
+* Applied **CSS variables** for easy theme switching.
+* Used the `:checked` selector to create a **functional dark mode** without JavaScript.
+* Practiced structuring semantic HTML for a dashboard UI.
 
