@@ -1,44 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="light-mode">
-  <div class="dashboard">
-    
-    <!-- Header -->
-    <header class="header">
-      <h1>Admin Dashboard</h1>
-      <label>
-        <input type="checkbox" id="theme-toggle" />
-        Dark Mode
-      </label>
-    </header>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Users</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <h2>Welcome, Admin!</h2>
-      <p>This is the main content area. Add charts, tables, or reports here.</p>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      &copy; 2025 Admin Panel
-    </footer>
+<body>
+  <input id="toggle" type="checkbox">
+ <div class="dashboard">
+  <header><h3>Admin Dashboard</h3>
+    <label for="toggle">Dark Mode</label>
+  </header>
+  <nav><ul>
+    <li class="discs"><a href="#">Home</a></li>
+    <li class="discs"><a href="#">Users</a></li>
+    <li class="discs"><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+  <main><h2>Welcome Admin</h2>
+  <span>This is the main content area. Add charts, tables, reports here.</span></main>
+  <footer>©2025 Admin Panel</footer>
   </div>
-
-  <script src="sccript.js"></script>
 </body>
 </html>
