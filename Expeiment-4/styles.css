@@ -1,0 +1,47 @@
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f0f0f0; /* Lighter off-white */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh; /* Ensure full viewport height */
+   margin: 0; /* Remove default body margin */
+}
+
+.container {
+    max-width: 600px; /* This sets the maximum width */
+    background-color: #e8e8e8;
+    padding: 30px;
+    border-radius: 10px; /* This gives it slightly rounded corners, but it remains a rectangle */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+h2 {
+    
+   color: #555; /* Darker text for better contrast */
+   margin-bottom: 20px;
+}
+
+.counter-section {
+   margin-bottom: 25px;
+}
+
+textarea {
+   width: calc(100% - 22px); /* Adjust width for padding and border */
+   height: 120px;
+   padding: 10px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+   resize: vertical;
+   box-sizing: border-box;
+   margin-bottom: 10px; /* Add some space below the textarea */
+}
+
+.character-count {
+   font-size: 18px;
+   color: #777; /* Slightly darker character count */
+   font-weight: bold;
+}
+
