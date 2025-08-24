@@ -1,0 +1,58 @@
+SVG FREEHAND DRAWING TOOL
+
+1. FEATURE: Drawing Area
+   Requirement: User must be able to draw freehand using mouse.
+   Implementation: Implemented with an <svg> element where paths (<path>) are dynamically created.
+   VALID ACTIONS:
+       - Click and drag inside the drawing area to draw.
+       - Multiple strokes can be drawn.
+   INVALID ACTIONS:
+       - Clicking outside the drawing area will not draw.
+       - Drawing without mouse press will not work.
+
+2. FEATURE: Path Creation
+   Requirement: Each stroke should be represented as an SVG <path>.
+   Implementation: On mousedown, a new path is created with "M x y". On mousemove, line segments ("L x y") are appended.
+   VALID EXAMPLES:
+       - Continuous freehand strokes.
+       - Multiple distinct paths in one session.
+   INVALID EXAMPLES:
+       - No path is created without pressing mouse.
+       - Releasing mouse stops path creation.
+
+3. FEATURE: Event Handling
+   Requirement: Mouse events should handle drawing logic.
+   Implementation:
+       - mousedown → Start new stroke.
+       - mousemove → Extend path.
+       - mouseup → End stroke.
+   Expected Output: Smooth, continuous freehand drawing.
+   Invalid Case: Without mouseup, stroke would continue infinitely.
+
+CSS STYLING BREAKDOWN: A Structured Overview
+
+1. ELEMENT: body
+   Purpose: Defines overall font styling.
+   Property: font-family: Arial, sans-serif;
+   Effect: Sets clean, readable text style.
+
+2. ELEMENT: .container
+   Purpose: Main wrapper for the drawing area.
+   Properties & Effects:
+       border: 1px solid #444; → Creates border around the tool.
+       width: 600px; → Sets fixed width.
+       padding: 10px; → Adds spacing inside container.
+
+3. ELEMENT: #drawingArea
+   Purpose: Defines the canvas where drawing happens.
+   Properties & Effects:
+       border: 1px solid #444; → Creates boundary around drawing space.
+       background: #f9f9f9; → Sets light gray background.
+       width: 560px, height: 400px → Fixed size canvas.
+       cursor: crosshair; → Gives drawing-like pointer.
+
+LEARNING OUTCOMES:
+1. Learnt how to create a scalable freehand drawing tool using SVG.
+2. Understood event handling with mouse events in JavaScript.
+3. Practiced working with SVG path attributes (M, L).
+4. Improved CSS styling skills for user interface design.
